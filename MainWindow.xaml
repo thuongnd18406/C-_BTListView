@@ -1,0 +1,48 @@
+﻿<Window x:Class="BTLIST.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTLIST"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="800">
+    <Grid ShowGridLines="True" Background="LemonChiffon">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="XỬ LÍ LIST" Grid.Row="0" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Chartreuse" FontWeight="Bold" Margin="0,1,0,43" Grid.RowSpan="2" ></Label>
+        <UniformGrid Columns="2" Grid.Row="1">
+            <Label Content="Kết quả" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Chartreuse"  Margin="50,0,160,0"  />
+            <TextBox x:Name="txtKQList" IsReadOnly="True" Grid.Row="1"  FontSize="15"  Width="930"  VerticalContentAlignment="Center"  Foreground="Chartreuse" FontWeight="Bold" HorizontalAlignment="Left" Margin="-168,0,-366,0" />
+        </UniformGrid>
+        <UniformGrid Columns="3" Grid.Row="2">
+            <GroupBox Header="Nhập mảng">
+                <UniformGrid Rows="5">
+                    <Label Content="Nhập số phần tử" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5"></Label>
+                    <TextBox x:Name="txtSPTList1" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5"></TextBox>
+                    <Button x:Name="btnXuatList1" Content=" Xuất mảng" Margin="5" Click="BtnXuatList1_Click"></Button>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Header="Thêm-Sửa-Xóa">
+                <UniformGrid Rows="6" Columns="2">
+                    <Label Content="Nhập phần tử" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" ></Label>
+                    <TextBox Name="txtSoMoiList" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5"></TextBox>
+                    <Label Content="Vị trí" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5"></Label>
+                    <TextBox x:Name="txtViTriList" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5"></TextBox>
+                    <Button x:Name="btnThemDauList1" Content="Thêm vào đầu List" Margin="5" Click="BtnThemDauList1_Click"></Button>
+                    <Button x:Name="btnThemCuoiList1" Content="Thêm vào cuối List" Margin="5" Click="BtnThemCuoiList1_Click_1"></Button>
+                    <Button x:Name="btnChenList1" Content="Chèn" Margin="5" Click="BtnChenList1_Click"></Button>
+                    <Button x:Name="btnXoaList1" Content=" Xóa" Margin="5" Click="BtnXoaList1_Click_1"></Button>
+                </UniformGrid>
+            </GroupBox>
+            <GroupBox Header="Sắp xếp">
+                <UniformGrid Rows="2">
+                    <Button x:Name="button2" Content="Sắp xếp 2 List tăng dần" Margin="20,30" Click="Button2_Click"></Button>
+
+                </UniformGrid>
+            </GroupBox>
+        </UniformGrid>
+    </Grid>
+</Window>
